@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-light fixed-top py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3 fw-bold" href="index.html">Canvas & Co.</a>
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop
+                        <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            Cart
+                            <span class="cart-pill" aria-label="Cart items"><span id="cart-count">0</span></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle active"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >More</a
+                        >
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="about.html">About Us</a>
+                            <a class="dropdown-item active" href="contact.html">Contact Us</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0" data-search-form>
+                    <input
+                        class="form-control me-2 w-50"
+                        type="text"
+                        placeholder="Search the world's finest art materials"
+                        style="min-width: 450px !important; width: 450px !important;"
+                        data-search-input
+                    />
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container contact-page">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-5">
+                    <div class="info-card h-100">
+                        <h1 class="fw-bold mb-3">Contact Us</h1>
+                        <p class="mb-4">Need help choosing art materials or have a question about your order? We’re here to help.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><strong>Email:</strong> support@artmaterials.com</li>
+                            <li class="mb-3"><strong>Phone:</strong> +63 955-501-0621 </li>
+                            <li class="mb-3"><strong>Location:</strong> Manila, Philippines</li>
+                        </ul>
+                        <div class="bg-white text-dark rounded-3 p-3 mt-4">
+                            <h6 class="fw-bold">Response time</h6>
+                            <p class="mb-0">We usually reply within 1 business day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact-card bg-white">
+                        <h3 class="fw-bold mb-3">Send us a message</h3>
+                        <p class="text-muted mb-4">Tell us about your needs and we’ll get back shortly.</p>
+
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="topic" class="form-label">Topic</label>
+                                    <select class="form-select" id="topic" required>
+                                        <option value="">Choose a topic</option>
+                                        <option value="Order Support">Order Support</option>
+                                        <option value="Product Inquiry">Product Inquiry</option>
+                                        <option value="Shipping">Shipping</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-4" id="submitBtn">Send Message</button>
+                            <div id="formMessage" class="alert mt-3 d-none" role="alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-card bg-white">
+                <h5 class="fw-bold mb-3">Recent messages</h5>
+                <ul id="recentMessages" class="list-unstyled mb-0"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    <script src="contact.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
